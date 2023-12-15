@@ -34,50 +34,50 @@ class AppbarHomeWork extends StatelessWidget {
             )
           ]
         ),
-        body: Row(
-          children: [
-            Container(
-              width: 150,
-              height: 150,
-              margin: const EdgeInsets.all(10),
-              child: const Image(image: AssetImage('assets/camera.jpg')),
-            ),
-            const SizedBox(
-              width: 300,
-              height: 130,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '캐논 DSLR 100D (단렌즈,\n충전기 16기가SD 포함)',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  Text(
-                    '성동구 행당동 . 끌올 10분 전',
-                    style: TextStyle(
-                      color: Color(0xffa5a5a5)
-                    ),
-                  ),
-                  Text(
-                    '210,000원',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w900
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+        body: Container(
+          height: 150,
+          margin: const EdgeInsets.all(10),
+          child: Row(
+            children: [
+              const Image(image: AssetImage('assets/camera.jpg')),
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  child: const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(Icons.thumb_up),
-                      Text('4')
+                      Text(
+                        '캐논 DSLR 100D (단렌즈,\n충전기 16기가SD 포함)',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        '성동구 행당동 . 끌올 10분 전',
+                        style: TextStyle(
+                            color: Color(0xffa5a5a5)
+                        ),
+                      ),
+                      Text(
+                        '210,000원',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w900
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Icon(Icons.thumb_up),
+                          Text('4')
+                        ],
+                      )
                     ],
-                  )
-                ],
+                  ),
+                ),
               )
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );
